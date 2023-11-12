@@ -21,7 +21,7 @@ void loop()
   sensorValue = analogRead(sensorPin);
   thermoStat = map(sensorValue, 0, 1023, 30, 100);
 
-  if (thermoStat > degreesF){
+  if (degreesF > thermoStat){
     digitalWrite(ledPin, HIGH);
   }
   else{
